@@ -13,7 +13,8 @@ The following packages have been installed using apt-get:
 * postgresql-contrib
 * python3-dev 
 * python3-pip 
-* python3-virtualenv
+* python3-venv
+* libpq-dev
 
 #### Python3 Configuration
 The following packages have been installed using pip:
@@ -22,21 +23,23 @@ The following packages have been installed using pip:
 2. flask
 
 #### General Settings Configuration
-* Made two users for the server.
-  Added public keys for key authentication access.
-* Removed the default 'ubuntu' user that is made by Amazon LightSail
+* Made three users for the server.
 * Disabled remote root login access
+  Added public keys for key authentication access where appropriate.
 * Enabled key authentication only access
+* Removed the default 'ubuntu' user that is made by Amazon LightSail
 * Created UFW rules for SSH, HTTP, NTP connections
 * Configured a non-default port for SSH connections
 * Configured apache2 to host WSGI applications via the WSGIScriptAlias with python3
 * Configured PostgreSQL to provide the hosted application CRUD functionality
+* Updated files in catalog-project to work with WSGI hosting
 
 
 ## Accessing the Server
 The server IP is: 34.198.251.47
+The domain the server is mapped to is: [catalog.justin-tadlock.com](catalog.justin-tadlock.com)
 
-This IP address will be used ot browse the application.
+This IP address/domain will be used to browse the application.
 
 
 ## Authors
@@ -46,4 +49,4 @@ This IP address will be used ot browse the application.
 
 ## Acknowledgments
 * [Set up PostgreSQL](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04)
-* [Configure Ubuntu 18.04 for Python3 and Flask](https://www.fullstackpython.com/blog/python-3-flask-gunicorn-ubuntu-1804-bionic-beaver.html)
+* [Deploying Flask Application with WSGI server using apache2 on AWS Cloud Ubuntu Machine](https://medium.com/@satyavinay456/deploying-flask-application-using-wsgi-server-with-apache2-on-aws-cloud-ubuntu-machine-b7a15ca25cff)
