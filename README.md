@@ -58,7 +58,7 @@ The following is the pip list:
 
 
 ## Accessing the Server
-The server IP is: 34.198.251.47
+The server IP is: [34.198.251.47](http://34.198.251.47)
 
 The SSH Port is: 2200
 
