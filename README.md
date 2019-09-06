@@ -1,5 +1,5 @@
 # linux-server-config-project
-The purpose of this project is to learn how to set up and configure a linux server to host a web application using Amazon Lightsail.
+The purpose of this project is to learn how to set up and configure a linux server and host a web application using it with Amazon Lightsail.
 
 The application that will be hosted on this server is my [catalog-project](https://github.com/Justin-Tadlock/catalog-project).
 
@@ -15,12 +15,34 @@ The following packages have been installed using apt-get:
 * python3-pip 
 * python3-venv
 * libpq-dev
+* postgresql-client 
+* postgresql-client-common
+* virtualenv
 
 #### Python3 Configuration
-The following packages have been installed using pip:
-1. setuptools
-2. wheel
-2. flask
+The following is the pip list:
+* bleach==3.1.0
+* cachetools==3.1.1
+* certifi==2019.6.16
+* chardet==3.0.4
+* Click==7.0
+* Flask==1.0.2
+* google-auth==1.6.3
+* idna==2.8
+* itsdangerous==1.1.0
+* Jinja2==2.10.1
+* MarkupSafe==1.1.1
+* psycopg2==2.8.3
+* pyasn1==0.4.7
+* pyasn1-modules==0.2.6
+* requests==2.22.0
+* rsa==4.0
+* six==1.12.0
+* SQLAlchemy==1.3.6
+* urllib3==1.25.3
+* webencodings==0.5.1
+* Werkzeug==0.15.5
+
 
 #### General Settings Configuration
 * Made three users for the server.
@@ -37,7 +59,10 @@ The following packages have been installed using pip:
 
 ## Accessing the Server
 The server IP is: 34.198.251.47
-The domain the server is mapped to is: [catalog.justin-tadlock.com](catalog.justin-tadlock.com)
+The SSH Port is: 2200
+
+NOTE: The domain the server is also mapped to: 
+* [catalog.justin-tadlock.com](http://catalog.justin-tadlock.com)
 
 This IP address/domain will be used to browse the application.
 
@@ -50,3 +75,4 @@ This IP address/domain will be used to browse the application.
 ## Acknowledgments
 * [Set up PostgreSQL](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04)
 * [Deploying Flask Application with WSGI server using apache2 on AWS Cloud Ubuntu Machine](https://medium.com/@satyavinay456/deploying-flask-application-using-wsgi-server-with-apache2-on-aws-cloud-ubuntu-machine-b7a15ca25cff)
+* [Global Variables with WSGI hosted applications](https://www.pythonanywhere.com/forums/topic/3801/)
